@@ -1,0 +1,81 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+.select-div{
+    position: relative;
+    z-index: 9998;
+    margin: 10px 10px;
+}
+
+.splash{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+  color: white;
+  text-align: center;
+}
+
+.splash.fading-out{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+  color: white;
+  text-align: center;
+  line-height: 90vh;
+  transition: 0.5s;
+}
+
+.splash.display-none {
+  display: none;
+}
+
+@keyframes fadeIn{
+  to{
+    opacity: 1;
+  }
+}
+
+.fade-in{
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
