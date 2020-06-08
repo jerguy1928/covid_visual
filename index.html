@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>COVID-19 Map</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+	
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+	<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.9.4/leaflet-geocoder-mapzen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.9.4/leaflet-geocoder-mapzen.js"></script>
+
+
+</head>
+
+<body>
+
+	<div id='map'>
+
+		<form class = 'select-div' title='Choose a field'>
+			<select id="numbers">
+				<option value="rank"  >Rankings</option>
+				<option value="total_cases">Total Cases</option>
+				<option value="new_cases">New Cases</option>
+				<option value="total_deaths">Total Deaths</option>
+				<option value="new_deaths">New Deaths</option>
+				<option value="total_recovered">Total Recovered</option>
+				<option value="new_recovered">New Recoveries</option>
+				<option value="active_cases">Active Cases</option>  
+				<option value="critical_cases">Critical Cases</option> 
+				<option value="cases_1m">Total Cases/1M people</option>
+				<option value="deaths_1m">Deaths/1M people</option>
+				<option value="total_tests">Total Tests</option>
+				<option value="tests_1m">Tests/1M people</option>
+				<option value="population">Country Population</option>
+				<option value="cases_x_ppl">1 Case/X People</option>
+				<option value="deaths_x_ppl">1 Death/X People</option>
+				<option value="tests_x_ppl">1 Test/X People</option>
+			</select>
+		</form>
+
+
+	<script type="text/javascript" src="map_data.geojson"></script>
+	<script type="text/javascript" src="map.js"></script>
+
+	
+
+
+</body>
+</html>
